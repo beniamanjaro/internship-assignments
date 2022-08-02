@@ -53,9 +53,7 @@ namespace GenericCollectionAssignment
                 throw new Exception("Element not found");
             }
 
-            T temp = _array[itemAIndex];
-            _array[itemAIndex] = _array[b];
-            _array[b] = temp;
+            Swap(itemAIndex, b);
         }
 
         public void Swap(int a, T b)
@@ -67,9 +65,7 @@ namespace GenericCollectionAssignment
                 throw new Exception("Element not found");
             }
 
-            T temp = _array[itemBIndex];
-            _array[itemBIndex] = _array[a];
-            _array[a] = temp;
+            Swap(a, itemBIndex);
         }
 
         public void Swap(T a, T b)
@@ -82,17 +78,9 @@ namespace GenericCollectionAssignment
                 throw new Exception("Element not found");
             }
 
-            T temp = _array[itemBIndex];
-            _array[itemBIndex] = _array[itemAIndex];
-            _array[itemAIndex] = temp;
-
-
+            Swap(itemAIndex, itemBIndex);
 
         }
-
-
-
-
 
     }
 }
